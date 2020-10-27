@@ -26,4 +26,13 @@ function navImage(direction) {
             activeCircle.next('i').addClass('active');
         }
     }
+    else if (direction === 'prev') {
+        if (activeImage.hasClass('first') === true) {
+            $('.images img.last').addClass('active');
+            $('.nav i.last').addClass('active');
+        } else {
+            activeImage.prev('img').addClass('active');
+            activeCircle.prev('i').addClass('active');
+        }
+    }
 }
